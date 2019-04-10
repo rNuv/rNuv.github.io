@@ -215,7 +215,7 @@ ul{
 	margin-top: 20px; 
 }
 
-.work, .work2 a{
+.work a, .work2 a{
 	text-decoration: none;
-	color: #17191 A;
+	color: #17191A;
 }
