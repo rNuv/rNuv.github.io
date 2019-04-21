@@ -85,6 +85,10 @@ p{
 	text-align: right;
 }
 
+.button{
+	font-size: 30px;
+}
+
 .navIcons a, .contactMe a, .contactMe img{
 	display: inline-block;
 	vertical-align: middle;
