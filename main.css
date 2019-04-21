@@ -37,6 +37,14 @@ body{
 	color: #027BFF;
 }
 
+.red{
+	color: #FF0000;
+}
+
+.green{
+	color: #00FF00;
+}
+
 h1{
 	font-size: 40px;
 	font-weight: 400;
