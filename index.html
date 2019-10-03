@@ -1,89 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-	<title>Arnav Nayak</title>
-	<meta charset = "utf-8">
-	<meta name = "viewport" content="width=device.width, initial-scale=1.0">
-	<link rel = "stylesheet" type = "text/css" href = "main.css">
-</head>
-
-<body>
-	<div class = "nav">
-		<div class = "contactMe">
-			<a href = "mailto:arnavnayak2003@gmail.com"><img src = "images/Chat_Blue.png" alt = "chat logo">Contact Me</a>
-		</div>
-		<div class = "navIcons">
-			<a href = "https://www.instagram.com/arnav.03/"><img src = "images/Instagram_gray.png" width = "26px"alt = "Instagram logo"></a>
-			<a href = "https://github.com/rNuv"><img src = "images/Github_gray.png" width = "26px" alt = "Github logo"></a>
-			<a href = "https://devpost.com/arnavnayak2003?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"><img src = "images/Dev_gray.png" alt = "Devpost logo" width = "26px"></a>
-		</div>
-	</div>
-
-
-	<div class = "landing">
-		<div class = "landingWrapper">
-			<div class = "landingL">
-				<h1>Arnav Nayak.</h1>
-				<p>Hello. My name is Arnav Nayak. <br>I am a <span class = "blue">sophomore</span> at <br>South Brunswick High School</p>
-				<ul>
-					<li><p>Student</p></li>
-					<li><p>Programmer</p></li>
-					<li><p>Learner</p></li> 
-				</ul>
-			</div>
-			<div class = "landingR">
-				<img src = "images/Face_Image.png" alt = "Arnav Nayak" width = "300px">
-			</div>
-		</div>
-		<img src = "images/Scroll.png" alt = "Scroll Down" class = "scroll">
-	</div>
-
-	<div class = "skills">
-		<h2>Skills</h2>
-		<p>In the process of mastering these<br>programming languages.</p>
-		<div class = "programs">
-			<img src = "images/swift.png" alt = "swift icon">
-			<img src = "images/java.png" alt = "java icon">
-			<img src = "images/bash.png" alt = "bash icon">
-			<img src = "images/cpp.png" alt = "cpp icon">
-			<img src = "images/html.png" alt = "html icon">
-			<img src = "images/css.png" alt = "css icon">
-		</div>
-	</div>
-
-	<div class = "skills">
-		<h2>Coursework</h2>
-		<p>AP Calculus<br>AP Physics 1<br>AP Computer Science A</p>
-	</div>
-
-	<div class = "work clearfix">
-		<div class = "workText">
-			<h1>Robotics</h1>
-			<a href = "robotics.html"><h5>View Page</h5></a>
-			<div class = "underline"></div>
-		</div>
-		<ul>
-			<li><a href = "https://www.instagram.com/arnav.03/"><img src = "images/Instagram_black.png" width = "26px" alt = "dribble icon"></a></li>
-			<li><a href = "https://github.com/rNuv"><img src = "images/Github_black.png" width = "30px" alt = "be icon"></a></li>
-			<li><a href = "https://devpost.com/arnavnayak2003?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"><img src = "images/Dev_black.png" width = "26px" alt = "youtube icon"></a></li>
-		</ul>
-		 <img src = "images/vex.jpg" alt = "project image" class = "workImg">
-	</div>
-
-
-	<!--<div class = "work2 clearfix">
-		<div class = "workText">
-			<h1>Robotics</h1>
-			<a href = "#"><h5>View Page</h5></a>
-			<div class = "underline"></div>
-		</div>
-		<ul>
-			<li><a href = "#"><img src = "images/Dribbble_Black.png" alt = "dribble icon"></a></li>
-			<li><a href = "#"><img src = "images/Be_Black.png" alt = "be icon"></a></li>
-			<li><a href = "#"><img src = "images/Youtube_Black.png" alt = "youtube icon"></a></li>
-		</ul>
-		 <img src = "images/Project_01.png" alt = "project image" class = "workImg">
-	</div>
-	-->
-</body>
+	<head>
+		<title>Chat Controller</title>
+		<script src="/socket.io/socket.io.js"></script>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h1 class = 'header'>Chat Room</h1>
+		<h3 class = 'header'>Powered by the CS Club</h3>
+		<div id="container">
+			<div id="messages" style = "text-align:center;"><b>Chat</b><br /></div>
+			<p contenteditable id="input" style="overflow-x: auto;"></p>
+			<button type="button" id="send" style = "font-family:'Comic Sans MS', cursive,sans-serif;">Send</button>
+		</div>	
+		<script>
+const socket = io('/chat');
+let username = prompt("Enter a username");
+let messageBox = document.querySelector("#messages");
+let inputBox = document.querySelector("#input");
+let sendButton = document.querySelector("#send");
+sendButton.onclick = ()=>{
+	sendMessage();
+}
+inputBox.onkeydown = (event)=>{
+	if(event.which === 13 || event.charCode === 13){
+		event.preventDefault();
+		sendMessage();
+	}
+}
+socket.on('message_received', (message)=>{
+	messageBox.innerText += message.trim();
+	messageBox.innerHTML += "<br />"
+	messageBox.scrollTop = messageBox.scrollHeight;
+});
+function sendMessage(){
+	let message = inputBox.innerText;
+	inputBox.innerText = "";
+	socket.emit('message_sent', {
+		"username": username,
+		"body": message
+	});
+}
+		</script>
+	</body>	
 </html>

@@ -1,0 +1,37 @@
+body {
+	font-family: monospace;
+	background-color: #AED6F1;
+}
+#container {
+	margin: auto;
+	background-color: white;
+	border: 1px solid;
+	width: 400px;
+	height: 400px;
+}
+#messages {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	border: 1px solid;
+	height: 370px;
+	overflow-y: auto;
+}
+#input {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	width: 330px;
+	height: 18px;
+	background-color: #EEEEEE;
+	margin-top: 0px;
+	padding: 5px;
+	float: left;
+}
+button {
+	display: block;
+	text-align: center;
+	width: 60px;
+	height: 30px;
+	float: left;
+}
+.header{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: center;
+}
