@@ -6,8 +6,8 @@ body {
 	margin: auto;
 	background-color: white;
 	border: 1px solid;
-	width: 400px;
-	height: 90vh;
+	min-height: 100vh;
+	min-width:: 90vh;
 }
 #messages {
 	font-family: "Comic Sans MS", cursive, sans-serif;
