@@ -1,11 +1,11 @@
 body {
-	font-family: monospace;
+	font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
 	background-color: #AED6F1;
 	height: 400px;
 	width: 400px;
 }
 
-@media only screen and (max-width: 600px){
+@media screen and (max-width: 600px){
 	body{
 		zoom: 240%;
 	}
@@ -24,7 +24,7 @@ body {
 	overflow-y: auto;
 }
 #input {
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
 	width: 330px;
 	height: 18px;
 	background-color: #EEEEEE;
@@ -40,6 +40,6 @@ button {
 	float: left;
 }
 .header{
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
 	text-align: center;
 }
