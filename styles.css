@@ -4,12 +4,6 @@ body {
 	height: 400px;
 	width: 400px;
 }
-
-@media screen and (max-width: 600px){
-	body{
-		zoom: 240%;
-	}
-}
 #container {
 	margin: auto;
 	background-color: white;
@@ -42,4 +36,14 @@ button {
 .header{
 	font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
 	text-align: center;
+}
+
+@media screen and (max-width: 600px){
+	body{
+		font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
+		background-color: #AED6F1;
+		height: 400px;
+		width: 400px;
+		zoom: 240%;
+	}
 }
