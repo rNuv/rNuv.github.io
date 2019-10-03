@@ -3,8 +3,12 @@ body {
 	background-color: #AED6F1;
 	height: 400px;
 	width: 400px;
-	zoom: 250%;
-	
+}
+
+@media only screen and (max-width: 600px){
+	body{
+		zoom: 240%;
+	}
 }
 #container {
 	margin: auto;
@@ -14,7 +18,7 @@ body {
 	height: 400px; 
 }
 #messages {
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
 	border: 1px solid;
 	height: 370px;
 	overflow-y: auto;
