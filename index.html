@@ -1,107 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <title>Arnav Nayak</title>
-</head>
+    <head>
+      <meta charset="utf-8">
 
-<body>
-    <div class="section">
+      <title>Arnav Nayak</title>
+      <meta name="description" content="The HTML5 Herald">
+      <meta name="author" content="SitePoint">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="static/styles.css">
+      <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    </head>
 
-    	<nav class = "navigation">
-    		<div class = "navbar-contact">
-    			<a href = "mailto:arnavnayak2003@gmail.com"><img src = "images/Chat_Blue.png" alt = "chat logo">Contact Me</a>
-    		</div>
-    		<div class = "navbar-right">
-    			<a href = "https://www.instagram.com/arnav.03/"><img src = "images/Instagram_black.png" width = "24px"alt = "Instagram logo"></a>
-    			<a href = "https://github.com/rNuv"><img src = "images/Github_black.png" width = "26px" alt = "Github logo"></a>
-    			<a href = "https://devpost.com/arnavnayak2003?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"><img src = "images/Dev_black.png" alt = "Devpost logo" width = "26px"></a>
-    		</div>
-    	</nav>
+    <body>
 
-        <h1>Arnav Nayak</h1>
+      <header>
+        <span id='nav'>
+            <a id = 'home'>>$ cd /home/</a>
+            <span id='right'>
+                <nav>
+                    <ul>
+                        <li><a class='link' href="{{ url_for('about') }}">About</a></li>
+                        <span class='footer-content-blue'>|</span>
+                        <li><a class='link' href="{{ url_for('projects') }}">Projects</a></li>
+                    </ul>
+                </nav>
+            </span>
+        </span>
+      </header>
 
-        <div class="video-container">
-            <video autoplay loop muted>
-                <source src="images/bg.mp4" type="video/mp4">
-            </video>
+      <div id = 'page'>
+        <h1 class="line-1 anim_typewriter">Arnav Nayak</h1>
+        <h3>Computer Scientist<h3>
+        <div>
+            <a href="https://www.instagram.com/arnav.03"><img src="static/images/instagram.png"></img></a>
+            &nbsp;&nbsp;
+            <a href="https://www.github.com/rNuv"><img src="static/images/github.png"></img></a>
+            &nbsp;&nbsp;
+            <a href="https://www.gmail.com"><img src="static/images/mail.png"></img></a>
+            &nbsp;&nbsp;
+            <a href="https://www.linkedin.com/in/arnav-nayak-222b3b1a3/"><img src="{static/images/linkedin.png"></img></a>
         </div>
+      </div>
 
-    </div>
+      <footer>
+        <span class='footer-content'>Made with</span>
+        <span><img src="static/images/heart.png"></img></span>
+        <span class='footer-content'> by Arnav Nayak</span>
+        <span class="footer-content-blue">|</span>
+        <span class='footer-content'>2020<span>
+      </footer>
 
-    <div class="about">
-        <h1>aboutMeDict</h1>
-        <h2>"role" : "student"</h2>
-        <h2>"habitat" : "south brunswick nj"</h2>
-        <h2>"age" : "16"</h2>
-    </div>
+    </body>
 
-    <div class = "about">
-        <h1>Skills</h1>
-        <h2>In the process of mastering these<br>programming languages.</h2>
-        <div class = "programs">
-            <img src = "images/swift.png" width = "50px" alt = "swift icon">
-            <img src = "images/java.png" width = "50px" alt = "java icon">
-            <img src = "images/bash.png" width = "50px" alt = "bash icon">
-            <img src = "images/cpp.png" width = "50px" alt = "cpp icon">
-            <img src = "images/html.png" width = "50px" alt = "html icon">
-            <img src = "images/css.png" width = "50px" alt = "css icon">
-        </div>
-    </div>
-
-
-    <div class="about">
-        <h1>Coursework</h1>
-        <h2>Multivariable Calculus and Linear Algebra</h2>
-        <h2>AP Physics C/1</h2>
-        <h2>AP Comp Sci</h2>
-        <h2>AP Calc BC/AB</h2>
-        <h2>AP Lang</h2>
-    </div>
-
-    <div class="cards-list">
-  
-        <div class="card 1">
-          <div class="card_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
-          <div class="card_title title-white">
-            <p>Card Title</p>
-          </div>
-        </div>
-
-          <div class="card 2">
-          <div class="card_image">
-            <img src="https://cdn.blackmilkclothing.com/media/wysiwyg/Wallpapers/PhoneWallpapers_FloralCoral.jpg" />
-            </div>
-          <div class="card_title title-white">
-            <p>Card Title</p>
-          </div>
-        </div>
-
-        <div class="card 3">
-          <div class="card_image">
-            <img src="https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif" />
-          </div>
-          <div class="card_title">
-            <p>Card Title</p>
-          </div>
-        </div>
-          
-        <div class="card 4">
-          <div class="card_image">
-            <img src="https://media.giphy.com/media/LwIyvaNcnzsD6/giphy.gif" />
-            </div>
-          <div class="card_title title-black">
-            <p>Card Title</p>
-          </div>
-        </div>
-
-</div>
-</body>
 </html>
