@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+      <meta charset="utf-8">
+
+      <title>Arnav Nayak</title>
+      <meta name="description" content="The HTML5 Herald">
+      <meta name="author" content="SitePoint">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="static/styles.css">
+      <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+      <header>
+        <span id='nav'>
+            <a id = 'home' href="index.html">>$ cd /home/</a>
+            <span id='right'>
+                <nav>
+                    <ul class = 'topnav'>
+                        <li class = 'horz'><a class='link' href="about.html">About</a></li>
+                        <span class='footer-content-blue'>|</span>
+                        <li class = 'horz'><a class='link' href="{{ url_for('projects') }}">Projects</a></li>
+                    </ul>
+                </nav>
+            </span>
+        </span>
+      </header>
+
+      <div id = 'page2'>
+
+        <div style="display: inline; position: fixed;">
+          <ul class = 'sidebar'>
+              <li class = 'aboutlink' onclick='clickAbstract()'>Abstract</li>
+              <li class = 'aboutlink' onclick='clickCourse()'>Coursework</li>
+          </ul>
+        </div>
+
+      <div style = 'display: inline-block;' id = 'Abstract'>
+        <h1>About Me</h1>
+        <p></p>
+      </div>
+
+      <div id = 'Courses' style="display: none;">
+        <h1>Coursework</h1>
+        <p>Multivariable Calculus and Linear Algebra</p>
+        <p>AP Physics C</p>
+        <p>AP Computer Science</p>
+        <p>AP Calc AB/BC</p>
+        <p>AP Physics 1</p>
+      </div>
+
+
+
+      </div>
+
+      <footer>
+        <span class='footer-content'>Made with</span>
+        <span><img src="static/images/heart.png"></img></span>
+        <span class='footer-content'> by Arnav Nayak</span>
+        <span class="footer-content-blue">|</span>
+        <span class='footer-content'>2020<span>
+      </footer>
+
+      <script>
+        function clickAbstract() {
+          var x = document.getElementById('Abstract');
+          var y = document.getElementById('Courses');
+          x.style.display = "inline-block";
+          y.style.display = "none";
+        }
+      </script>
+
+      <script>
+        function clickCourse() {
+          var x = document.getElementById('Courses');
+          var y = document.getElementById('Abstract');
+          x.style.display = "inline-block";
+          y.style.display = "none";
+        }
+      </script>
+
+    </body>
+
+</html>

@@ -1,9 +1,9 @@
-ul {
+.topnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-li {
+.horz {
   display: inline;
 }
 a{
@@ -15,11 +15,19 @@ a{
 .link:hover{
 	background-color: #20817e;
 }
-#page{
+#page1{
 	position: absolute;
 	left: 10%;
     right: 10%;
     top: 37%;
+    bottom: 10%;
+}
+
+#page2{
+	position: absolute;
+	left: 10%;
+    right: 10%;
+    top: 20%;
     bottom: 10%;
 }
 html, body{
@@ -83,6 +91,31 @@ footer{
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);    
+}
+.sidebar{
+	color: #2aa198;
+	font-family: 'Muli', sans-serif;
+	margin-left: 110px;
+	margin-top: 110px;
+	list-style-type: none;
+	display: inline-block;
+}
+.aboutlink{
+	display: block;
+	padding-top: 10px;
+}
+.aboutlink:hover{
+	background-color: #073642;
+}
+#Abstract{
+	padding-left: 100px;
+	position: absolute;
+	left: 22%;
+}
+#Courses{
+	padding-left: 100px;
+	position: absolute;
+	left: 22%;
 }
 .anim_typewriter{
 	animation: typewriter 1s steps(10) 1s 1 normal both, 

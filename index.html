@@ -18,20 +18,21 @@
 
       <header>
         <span id='nav'>
-            <a id = 'home'>>$ cd /home/</a>
+            <a id = 'home' href="index.html">>$ cd /home/</a>
             <span id='right'>
                 <nav>
-                    <ul>
-                        <li><a class='link' href="{{ url_for('about') }}">About</a></li>
+                    <ul class = 'topnav'>
+                        <li class = 'horz'><a class='link' href="about.html">About</a></li>
                         <span class='footer-content-blue'>|</span>
-                        <li><a class='link' href="{{ url_for('projects') }}">Projects</a></li>
+                        <li class = 'horz'><a class='link' href="{{ url_for('projects') }}">Projects</a></li>
                     </ul>
                 </nav>
             </span>
         </span>
       </header>
 
-      <div id = 'page'>
+
+      <div id = 'page1'>
         <h1 class="line-1 anim_typewriter">Arnav Nayak</h1>
         <h3>Computer Scientist<h3>
         <div>
