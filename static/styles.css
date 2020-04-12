@@ -12,6 +12,10 @@ a{
 	font-family: 'Muli', sans-serif;
 	font-size: 20px;
 }
+p{
+	font-family: 'Muli', sans-serif;
+	color: #839496;
+}
 .link:hover{
 	background-color: #20817e;
 }
@@ -38,6 +42,12 @@ html, body{
 }
 h1{
 	text-align: center;
+	font-size: 50px;
+	font-family: 'Muli', sans-serif;
+	color: #cb4b15;
+	margin: 0;
+}
+h2{
 	font-size: 50px;
 	font-family: 'Muli', sans-serif;
 	color: #cb4b15;
@@ -110,12 +120,12 @@ footer{
 #Abstract{
 	padding-left: 100px;
 	position: absolute;
-	left: 22%;
+	left: 24%;
 }
 #Courses{
 	padding-left: 100px;
 	position: absolute;
-	left: 22%;
+	left: 24%;
 }
 .anim_typewriter{
 	animation: typewriter 1s steps(10) 1s 1 normal both, 
