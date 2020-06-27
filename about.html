@@ -24,7 +24,7 @@
                     <ul class = 'topnav'>
                         <li class = 'horz'><a class='link' href="about.html">About</a></li>
                         <span class='footer-content-blue'>|</span>
-                        <li class = 'horz'><a class='link' href="{{ url_for('projects') }}">Projects</a></li>
+                        <li class = 'horz'><a class='link' href="projects.html">Projects</a></li>
                     </ul>
                 </nav>
             </span>
@@ -37,22 +37,42 @@
           <ul class = 'sidebar'>
               <li class = 'aboutlink' onclick='clickAbstract()'>Abstract</li>
               <li class = 'aboutlink' onclick='clickCourse()'>Coursework</li>
+              <li class = 'aboutlink' onclick='clickExp()'>Experience</li>
           </ul>
         </div>
 
       <div style = 'display: inline-block;' id = 'Abstract'>
         <h2>About Me</h2>
-        <p>Hello there.</p>
+        <p>If you couldn't tell already, my name is Arnav Nayak. I'm a senior at South Brunswick High School that would be more than happy to spend the rest of my days sleeping and eating. But that would leave me with a lot of free time. Instead, I code, read books, play video games, study philosophy and macroeconomic theory, solve differential equations, derive Stokes Theorem, learn quantum phenomena and mechanics - the whole shebang. This site highlights some of my computer science related ventures, but I assure you this scratches the surface of my semi interesting academic endeavors.</p>
       </div>
 
       <div id = 'Courses' style="display: none;">
         <h2>Coursework</h2>
+        <p>Modern Physics</p>
+        <p>Differential Equations and Complex Analysis</p>
         <p>Multivariable Calculus and Linear Algebra</p>
+        <p>Data Structures</p>
+        <p>Artificial Intelligence</p>
+        <p>Virtual Reality Design</p>
         <p>Mobile App Development and Game Design</p>
-        <p>AP Physics C</p>
+        <p>AP Physics 1/C</p>
         <p>AP Computer Science</p>
         <p>AP Calc AB/BC</p>
-        <p>AP Physics 1</p>
+        <p>AP Macro/Micro</p>
+      </div>
+
+      <div id = 'Experience' style="display: none;">
+        <h2>Experience</h2>
+        <h4>Bloomberg Intern</h4>
+        <p style="padding-left: 25px; margin-top: 7px"> -Worked with the engineering triage team to monitor server systems</p>
+        <h4>CS Club Officer</h4>
+        <p style="padding-left: 25px; margin-top: 7px"> -Led and taught lessons at our school's CS Club</p>
+        <p style="padding-left: 25px; margin-top: 7px"> -Arranged and organized our annual hackathon HackSB </p>
+        <h4>Code Tutor at Code Ninjas</h4>
+        <p style="padding-left: 25px; margin-top: 7px"> -Tutored kids in computer science with the basics of Javascript and Python</p>
+        <h4>Head Programmer of VEX Robotics Team</h4>
+        <p style="padding-left: 25px; margin-top: 7px"> -Programmed our school robotics team's robot for competitive play in C++</p>
+        <p style="padding-left: 25px; margin-top: 7px"> -Made it to VEX Worlds</p>
       </div>
 
 
@@ -69,10 +89,12 @@
 
       <script>
         function clickAbstract() {
-          var x = document.getElementById('Abstract');
-          var y = document.getElementById('Courses');
-          x.style.display = "inline-block";
-          y.style.display = "none";
+          var x = document.getElementById('Courses');
+          var y = document.getElementById('Abstract');
+          var z = document.getElementById('Experience');        
+          x.style.display = "none";
+          y.style.display = "inline-block";
+          z.style.display = "none";
         }
       </script>
 
@@ -80,8 +102,21 @@
         function clickCourse() {
           var x = document.getElementById('Courses');
           var y = document.getElementById('Abstract');
+          var z = document.getElementById('Experience');
           x.style.display = "inline-block";
           y.style.display = "none";
+          z.style.display = "none";
+        }
+      </script>
+
+      <script>
+        function clickExp() {
+          var x = document.getElementById('Courses');
+          var y = document.getElementById('Abstract');
+          var z = document.getElementById('Experience');
+          x.style.display = "none";
+          y.style.display = "none";
+          z.style.display = "inline-block";
         }
       </script>
 

@@ -59,6 +59,13 @@ h3{
 	font-family: 'Muli', sans-serif;
 	color: #cb4b15;
 }
+h4{
+	font-size: 20px;
+	font-family: 'Muli', sans-serif;
+	color: #2aa198;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
 header{
 	padding: 25px;
 	padding-top: 30px;
@@ -123,6 +130,11 @@ footer{
 	left: 24%;
 }
 #Courses{
+	padding-left: 100px;
+	position: absolute;
+	left: 24%;
+}
+#Experience{
 	padding-left: 100px;
 	position: absolute;
 	left: 24%;
